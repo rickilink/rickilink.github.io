@@ -1,19 +1,20 @@
 import React from "react"
-import { Div4 , Div5, Div1, H2,  ImgContainer, Img } from "./styles"
+import { Container , Div5, Div1, H2,  ImgContainer, Img , P} from "./styles"
+
 
 export const SectionOne = () => {
     return(
-        <Div4>
+        <Container>
             <Div1 >
-                <Div5 ><H2 >Your Strategy Is Only As Good As
-                    You Execute It.</H2>
-                </Div5>
-                <ImgContainer>
-                    <Img src={require("../../../assets/images/cover.png") } alt='BackgroundImage' />
-                </ImgContainer>
+                <div>
+                <H2 >Cristobal  Matute.</H2>
+                <P> Portfolio is under Construction</P>
+                </div>
+               
+                 <Img src={require("../../../assets/images/cover.png") } alt='BackgroundImage' />
             </Div1>
 
-      </Div4>
+      </Container>
 
     )
 }

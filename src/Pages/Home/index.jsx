@@ -12,10 +12,10 @@ const Home = () => {
     return(
         <>
              <SectionOne />
-            <SectionTwo />
-            <SectionThree />
+             {/* <SectionTwo />
+           <SectionThree />
             <SectionFour />
-            <SectionFive />
+            <SectionFive /> */}
         </>
        
 

@@ -25,7 +25,7 @@ export const SectionTwo = () => {
                 <Li><Img  src={require("../../../assets/images/clarity_users-line.png") }/><p>Audit Report</p></Li>
                 <Li><Img  src={require("../../../assets/images/tax.png") }/><p>Audit Report</p></Li>
 
-          </Ul>
+          </Ul> 
         </Flexed>
 
     </Container>

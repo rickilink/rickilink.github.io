@@ -28,13 +28,17 @@ export const Nav = styled.nav`
    
     @media(min-width:1023px)
         {
+            position:absolute;
             display: flex;
-            background-color: #232120;
+           
             width: 100%;
             height: 72px;
             align-items: center;
+            background-color: rgb(32 37 114 / 8%);
+            left: 0;
             
-            justify-content: space-between;
+            
+            z-index:1;  
             
         } 
 `
@@ -86,3 +90,12 @@ export const Div3 = styled.button`
 
 
 
+export const Logo = styled.p`
+    font-size: 3rem;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+
+    `

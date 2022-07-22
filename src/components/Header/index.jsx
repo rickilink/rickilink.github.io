@@ -1,23 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import {  Nav, Div, Navi, Div3, Hided, ToHide, MainContainer , ImageContainerLogo} from './styles'
+import {  Nav, Div, Navi, Div3, Hided, ToHide, MainContainer , ImageContainerLogo, Logo} from './styles'
 import { Link } from '../../components/styles'
 
 
 export const Header = () => {
+    const [DisplayMenu , UseDisplayMenu] = useState(false)
+
+    console.log(DisplayMenu)
+    function handleClick() {
+        UseDisplayMenu(!DisplayMenu)
+    }
   return (
     <MainContainer>
         <Div>
             <Nav>
                 <ToHide>
-                <div>
-                    <img src={require("../../assets/images/menu.png")}  width={20} height={20} alt="Logo" />
+                <div onClick={() => handleClick()}>
+                {
+                   DisplayMenu ? <img src={require("../../assets/images/menu.png")}  width={20} height={20} alt="Logo" />: <h1>. </h1>
+                }
+                    
                    {/*  <Img2 width={20} height={20} src={'/static/assets/img/menu.png'}/> */}
                 </div>
                 
                 </ToHide>
                 <ImageContainerLogo>
-                    <img src={require("../../assets/images/logo.png")}  width={100} height={23} alt="Logo" />
+                    {/* <img src={require("../../assets/images/logo.png")}  width={100} height={23} alt="Logo" /> */}
+                    <Logo>Rickilink</Logo>
 
                    {/*  <Img width={100} height={23} src={'/static/assets/img/LOGO.png'}/> */}
                 </ImageContainerLogo>
@@ -27,7 +37,7 @@ export const Header = () => {
                         <Link to='#Social'><p>Social</p></Link>
                     </Hided>
 
-                    <Div3 > <Link to='#'>Get Started  &gt;</Link></Div3>
+                    {/* <Div3 > <Link to='#'>Get Started  &gt;</Link></Div3> */}
                 </Navi>
 
             </Nav>
