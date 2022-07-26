@@ -5,7 +5,7 @@ export const Container = styled.div`
     position:relative;
     width: 100%;
     height: 480px;
-    background: linear-gradient(337deg, #f79901 15%, rgb(0 0 0 / 5%) 67%);
+    background: radial-gradient(at 69% 27% ,rgb(32 37 114) 49%,rgba(0,0,0,1) 92%);
     mix-blend-mode: darken;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -14,11 +14,8 @@ export const Container = styled.div`
             position:relative;
             width: 100%;
             height: 600px;
-            
             align-content: center;
             justify-content: space-around;
-            
-            
             background: radial-gradient(at 69% 27% ,rgb(32 37 114) 49%,rgba(0,0,0,1) 92%);
             mix-blend-mode: darken;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 76%);
@@ -27,6 +24,13 @@ export const Container = styled.div`
 `
 
 export const Div1 = styled.div`
+
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+
 @media(min-width:1023px){
             display:flex;
             align-content: center;
@@ -44,13 +48,21 @@ export const ImgContainer = styled.div`
         } 
 `
 export const Img = styled.img`
-    width: 250px;
-    object-fit: contain; 
-    height: 216px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    filter: blur(5px);
+    max-height:456px;
+    max-width:440px;
+    
 
 @media(min-width:1023px){
+    position:absolute;
+    filter:none;
     width:inherit;
-    height:600px
+    height:600px;
+    right:50px;;
     
 }
 
@@ -59,7 +71,7 @@ export const Img = styled.img`
 `
 
 export const Div5 = styled.div`
-       display: flex;
+    display: flex;
     flex-direction: column;
     text-align:center;
 
@@ -86,3 +98,17 @@ export const H2 = styled.h2`
    
    `
 
+export const Div = styled.div`
+    position: absolute;
+    left: 15px;
+    top: 86px;
+    z-index: 1;
+
+@media(min-width:1023px){
+    position: absolute;
+    left: 353px;
+    top: 191px;
+    z-index: 1;
+
+}
+`

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export const MainContainer = styled.div`
-background-color: #232120;
+${'' /* background-color: rgb(0 0 0 / 1%); */}
 width: 100%;
 
 `
@@ -17,29 +17,31 @@ export const Div = styled.div`
 
 export const ImageContainerLogo = styled.div`
 
+
+@media(min-width:1023px){
+
+}
+
   `
 export const Nav = styled.nav`
     display: flex;
-    background-color: #232120;
+    background: radial-gradient(at 93% 81% ,rgb(32 37 114) 52%,rgb(16 18 56) 72%);
     width: 100%;
     height: 72px;
     align-items: center;
-    justify-content:space-around;
+  
    
     @media(min-width:1023px)
         {
             position:absolute;
             display: flex;
-           
             width: 100%;
             height: 72px;
             align-items: center;
             background-color: rgb(32 37 114 / 8%);
             left: 0;
-            
-            
             z-index:1;  
-            
+            justify-content:space-around;
         } 
 `
 
@@ -73,7 +75,25 @@ export const Hided = styled.div`
 }
 
 `
-
+export const Menu = styled.div`
+    position: absolute;
+    left: 0;
+    top: 83px;
+    z-index: 1;
+    width: 70px;
+    height: 68px;
+    background-color: rgb(7 21 39 / 80%);
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2px;
+`
 
 export const Div3 = styled.button`
     background-color: #f79901;
@@ -91,11 +111,18 @@ export const Div3 = styled.button`
 
 
 export const Logo = styled.p`
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: white;
     font-weight: 100;
-    text-align: center;
+    margin-left:10px;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
+  
+
+    @media(min-width:1023px){
+    font-size: 3rem;
+    text-align: center;
+
+    }
 
     `

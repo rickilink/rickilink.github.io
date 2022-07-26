@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import {  Nav, Div, Navi, Div3, Hided, ToHide, MainContainer , ImageContainerLogo, Logo} from './styles'
+import {  Nav, Div, Navi, Hided, ToHide, MainContainer , ImageContainerLogo, Logo, Menu} from './styles'
 import { Link } from '../../components/styles'
 
 
@@ -17,12 +17,18 @@ export const Header = () => {
             <Nav>
                 <ToHide>
                 <div onClick={() => handleClick()}>
-                {
-                   DisplayMenu ? <img src={require("../../assets/images/menu.png")}  width={20} height={20} alt="Logo" />: <h1>. </h1>
-                }
+                    <img  src={require("../../assets/images/icon-menu.png")}  width={20} height={20} alt="Logo" />
                     
                    {/*  <Img2 width={20} height={20} src={'/static/assets/img/menu.png'}/> */}
                 </div>
+                {
+                   !DisplayMenu ? null :  
+                   <Menu>
+                        
+                        <Link to='#'><p>Home</p></Link>
+                        <Link to='#Social'><p>Social</p></Link>
+                    </Menu>
+                }
                 
                 </ToHide>
                 <ImageContainerLogo>
